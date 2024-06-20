@@ -57,12 +57,6 @@ class SudokuBoard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                /*Obx(() {
-                  return Text(
-                    'Time Remaining: ${gameController.remainingTime ~/ 60}:${(gameController.remainingTime % 60).toString().padLeft(2, '0')}',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  );
-                }),*/
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.5,
                   child: GetBuilder<GameController>(
@@ -87,7 +81,7 @@ class SudokuBoard extends StatelessWidget {
                                 Constants.boxcolor[row][col] = Colors.blue;
                               }
                             }
-                            gameController.update(); // Update GetX controller
+                            gameController.update();
                           },
                           child: SudokuCell(
                             number: gameController.board[row][col],
@@ -118,15 +112,15 @@ class SudokuBoard extends StatelessWidget {
                           },
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
-                            disabledForegroundColor: Colors.grey.withOpacity(0.38), disabledBackgroundColor: Colors.grey.withOpacity(0.12), // Disabled text color
+                            disabledForegroundColor: Colors.grey.withOpacity(0.38), disabledBackgroundColor: Colors.grey.withOpacity(0.12),
                             shadowColor: Colors.grey,
-                            elevation: gameController.hintsUsed<1 ? 5:0, // Shadow elevation
+                            elevation: gameController.hintsUsed<1 ? 5:0,
             
                             side: BorderSide(
                               color:  Colors.grey,
-                              width:  gameController.hintsUsed<1? 1:0, // Border width
+                              width:  gameController.hintsUsed<1? 1:0,
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Padding
+                            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                           ),
                           child:Text(
                             'Hint',
@@ -152,13 +146,13 @@ class SudokuBoard extends StatelessWidget {
                             foregroundColor: Colors.black,
                             disabledForegroundColor: Colors.grey.withOpacity(0.38), disabledBackgroundColor: Colors.grey.withOpacity(0.12), // Disabled text color
                             shadowColor: Colors.grey,
-                            elevation: gameController.moveStack.isNotEmpty ?5:0, // Shadow elevation
+                            elevation: gameController.moveStack.isNotEmpty ?5:0,
             
                             side: BorderSide(
                               color:  Colors.grey,
-                              width:  gameController.moveStack.isNotEmpty ?1:0, // Border width
+                              width:  gameController.moveStack.isNotEmpty ?1:0,
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Padding
+                            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                           ),
                           child:Text(
                             'Undo',

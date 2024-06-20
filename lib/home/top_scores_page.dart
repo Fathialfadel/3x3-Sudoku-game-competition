@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../controllers/score_controller.dart';
 
 class TopScoresPage extends StatelessWidget {
