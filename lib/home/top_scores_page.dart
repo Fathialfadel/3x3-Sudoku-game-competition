@@ -14,47 +14,37 @@ class TopScoresPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Top Scores',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 20),
-            Obx(() {
-              final topScores = scoreController.topScores;
-              return topScores.isNotEmpty
-                  ? ListView.builder(
-                shrinkWrap: true,
-                itemCount: topScores.length,
-                itemBuilder: (context, index) {
-                  final score = topScores[index];
-                  return Card(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Text('${index + 1}'),
-                      ),trailing: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: List.generate(3, (index) {
-                            return Icon(
-                              index < score.score ? Icons.star : Icons.star_border,
-                              color: index < score.score ? Colors.amber : Colors.grey,
-                              size: 30,
-                            );
-                          }),
-                        ),
-                      title: Text('Score: ${score.score}'),
-                      subtitle: Text('Time: ${score.time} seconds'),
+        child: Obx(() {
+          final topScores = scoreController.topScores;
+          return topScores.isNotEmpty
+              ? ListView.builder(
+            shrinkWrap: true,
+            itemCount: topScores.length,
+            itemBuilder: (context, index) {
+              final score = topScores[index];
+              return Card(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    child: Text('${index + 1}'),
+                  ),trailing: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: List.generate(3, (index) {
+                        return Icon(
+                          index < score.score ? Icons.star : Icons.star_border,
+                          color: index < score.score ? Colors.amber : Colors.grey,
+                          size: 30,
+                        );
+                      }),
                     ),
-                  );
-                },
-              )
-                  : Text('No scores available.');
-            }),
-          ],
-        ),
+                  title: Text('Score: ${score.score}'),
+                  subtitle: Text('Time: ${score.time} seconds'),
+                ),
+              );
+            },
+          )
+              : Text('No scores available.');
+        }),
       ),
     );
   }
