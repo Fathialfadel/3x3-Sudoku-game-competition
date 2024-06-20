@@ -1,0 +1,38 @@
+Index: README.md
+===================================================================
+diff --git a/README.md b/README.md
+deleted file mode 100644
+--- a/README.md	(revision 65a14e74f2e29c0b81334d0a9627be1069b026d6)
++++ /dev/null	(revision 65a14e74f2e29c0b81334d0a9627be1069b026d6)
+@@ -1,20 +0,0 @@
+-<<<<<<< HEAD
+-# sudoku_game_competition
+-
+-A new Flutter project.
+-
+-## Getting Started
+-
+-This project is a starting point for a Flutter application.
+-
+-A few resources to get you started if this is your first Flutter project:
+-
+-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+-
+-For help getting started with Flutter development, view the
+-[online documentation](https://docs.flutter.dev/), which offers tutorials,
+-samples, guidance on mobile development, and a full API reference.
+-=======
+-# 3x3-Sudoku-game-competition
+->>>>>>> d4a596ce989f99283e7b60f5460c792ed3bc3ec7
+Index: H
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/H b/H
+new file mode 100644
+--- /dev/null	(date 1718870281443)
++++ b/H	(date 1718870281443)
+@@ -0,0 +1,1 @@
++
