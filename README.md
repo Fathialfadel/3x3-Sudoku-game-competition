@@ -24,12 +24,18 @@ This 3x3 Sudoku game is designed to provide a quick and enjoyable puzzle experie
 
 ## Screenshots
 
-![Game Screenshot](screenshots/screenshot1.jpeg)
-![Game Screenshot](screenshots/screenshot2.jpeg)
-![Game Screenshot](screenshots/screenshot3.jpeg)
-![Game Screenshot](screenshots/screenshot4.jpeg)
-![Game Screenshot](screenshots/screenshot5.jpeg)
-![Game Screenshot](screenshots/screenshot6.jpeg)
+<div style="display: flex; justify-content: center;">
+  <img src="screenshots/screenshot1.jpeg" alt="Game Screenshot 1" style="width: 33%; max-width: 400px; margin-right: 10px;margin-bottom: 15px;">
+  <img src="screenshots/screenshot2.jpeg" alt="Game Screenshot 2" style="width: 33%; max-width: 400px; margin-right: 10px;margin-bottom: 15px;">
+  <img src="screenshots/screenshot2.jpeg" alt="Game Screenshot 3" style="width: 33%; max-width: 400px; margin-right: 10px;margin-bottom: 15px;">
+</div>
+<div style="display: flex; justify-content: center;">
+  <img src="screenshots/screenshot4.jpeg" alt="Game Screenshot 4" style="width: 33%; max-width: 400px; margin-right: 10px;">
+  <img src="screenshots/screenshot5.jpeg" alt="Game Screenshot 5" style="width: 33%; max-width: 400px; margin-right: 10px;">
+  <img src="screenshots/screenshot6.jpeg" alt="Game Screenshot 6" style="width: 33%; max-width: 400px; margin-right: 10px;">
+</div>
+
+
 
 ## Installation
 
